@@ -37,6 +37,9 @@ ISR(TIMER1_OVF_vect)
 	
 	if(!(counter % 10)) PWM_Update();
 	
+	if(counter >= 8 && !((counter - 8) % 10)) IO_Deinit();
+	if(counter >= 8 && !((counter - 8) % 10)) PWM_Deinit();
+	
 	counter++;
 	if(counter == 255) counter = 5;
 }

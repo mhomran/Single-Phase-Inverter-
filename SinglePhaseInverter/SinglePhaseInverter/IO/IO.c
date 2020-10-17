@@ -23,6 +23,15 @@ IO_Init(void)
 	LOW_SIDE_B_ODR &= ~(1 << LOW_SIDE_B_PIN);
 }
 
+void
+IO_Deinit(void)
+{
+	HIGH_SIDE_A_ODR &= ~(1 << HIGH_SIDE_A_PIN);
+	HIGH_SIDE_B_ODR &= ~(1 << HIGH_SIDE_B_PIN);
+	LOW_SIDE_A_ODR &= ~(1 << LOW_SIDE_A_PIN);
+	LOW_SIDE_B_ODR &= ~(1 << LOW_SIDE_B_PIN);
+}
+
 void 
 IO_Update(void)
 {

@@ -11,6 +11,7 @@
 
 
 void IO_Init(void);
+void IO_Deinit(void);
 void IO_Update(void);
 
 
