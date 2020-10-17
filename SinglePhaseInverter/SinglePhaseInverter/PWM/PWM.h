@@ -12,5 +12,6 @@
 void PWM_Init(void);
 void PWM_Deinit(void);
 void PWM_Update(void);
+void PWM_DcUpdate(void);
 
 #endif /* PWM_H_ */

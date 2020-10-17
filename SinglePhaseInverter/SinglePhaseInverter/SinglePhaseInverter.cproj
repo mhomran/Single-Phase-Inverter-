@@ -108,6 +108,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ADC\ADC.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ADC\ADC.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="IO\IO.c">
       <SubType>compile</SubType>
     </Compile>
@@ -135,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IO" />
+    <Folder Include="ADC" />
     <Folder Include="PWM" />
     <Folder Include="OS" />
   </ItemGroup>

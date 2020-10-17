@@ -39,3 +39,11 @@ PWM_Update(void)
 	
 	counter++;	
 }
+
+void 
+PWM_DcUpdate(void)
+{
+	uint16_t adcRead = ADC;
+	OCR1A = (uint16_t)((((uint32_t)2000) * adcRead) >> 10);
+	OCR1B = OCR1A;
+}

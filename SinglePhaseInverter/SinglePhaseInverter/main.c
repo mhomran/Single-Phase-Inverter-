@@ -10,20 +10,22 @@
 #include "PWM/PWM.h"
 #include "OS/OS.h"
 #include "IO/IO.h"
+#include "ADC/ADC.h"
 
 int 
 main(void)
 {
 	IO_Init();
 	PWM_Init();
+	ADC_Init();
 	OS_Init();
 	
 	sei();
 	
   while (1) 
-  {
-		//DO NOTHING
-  }
+		{
+			//DO NOTHING
+		}
 		
 	//unreachable
 	return 0;
@@ -39,6 +41,7 @@ ISR(TIMER1_OVF_vect)
 	
 	if(counter >= 8 && !((counter - 8) % 10)) IO_Deinit();
 	if(counter >= 8 && !((counter - 8) % 10)) PWM_Deinit();
+	if(counter >= 8 && !((counter - 8) % 10)) PWM_DcUpdate();
 	
 	counter++;
 	if(counter == 255) counter = 5;
