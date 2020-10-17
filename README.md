@@ -8,7 +8,10 @@ Single Phase Inverter (H-bridge) algorithm with Atmega328p microcontroller targe
 - Arduino Uno
 - Arduino Nano
 
-# Installtion:
+# Timing Diagram:
+![TimingDiagram](Gallery/TimingDiagram.png)
+
+# Installation:
 ## Connect your hardware
 - HS_A = 9
 - HS_B = 10
