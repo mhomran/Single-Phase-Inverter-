@@ -1,2 +1,4 @@
-/.vs
-/SinglePhaseInverter/Debug
+/SinglePhaseInverter/.vs
+/SinglePhaseInverter/SinglePhaseInverter/Debug
+/Proteus/SinglePhaseInverter/*.pdsbak
+/Proteus/SinglePhaseInverter/*.workspace
