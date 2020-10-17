@@ -11,7 +11,6 @@
 void 
 PWM_Init(void)
 {
-	TCCR1A |= 1 << COM1A1 | 1 << COM1B1;
 	OCR1A = 1000;
 	OCR1B = 1000;
 }
@@ -20,4 +19,23 @@ void
 PWM_Deinit(void)
 {
 	TCCR1A &= ~(1 << COM1A1 | 1 << COM1B1);
+}
+
+void 
+PWM_Update(void)
+{
+	static uint8_t counter = 0;
+	
+	if(!(counter % 2))
+		{
+			TCCR1A |= 1 << COM1A1;
+			TCCR1A &= ~(1 << COM1B1);			
+		}
+	else
+		{
+			TCCR1A |= 1 << COM1B1;
+			TCCR1A &= ~(1 << COM1A1);
+		}
+	
+	counter++;	
 }

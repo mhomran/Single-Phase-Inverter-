@@ -17,6 +17,7 @@ main(void)
 	IO_Init();
 	PWM_Init();
 	OS_Init();
+	
 	sei();
 	
   while (1) 
@@ -30,6 +31,13 @@ main(void)
 
 ISR(TIMER1_OVF_vect)
 {
+	static uint8_t counter = 0;
 	
+	if(!(counter % 10)) IO_Update();
+	
+	if(!(counter % 10)) PWM_Update();
+	
+	counter++;
+	if(counter == 255) counter = 5;
 }
 

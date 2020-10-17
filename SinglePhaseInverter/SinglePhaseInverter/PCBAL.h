@@ -17,4 +17,11 @@
 #define HIGH_SIDE_A_PIN PIN1
 #define HIGH_SIDE_B_PIN PIN2
 
+#define LOW_SIDE_A_ODR PORTB
+#define LOW_SIDE_B_ODR PORTB
+#define LOW_SIDE_A_MODER DDRB
+#define LOW_SIDE_B_MODER DDRB
+#define LOW_SIDE_A_PIN PIN3
+#define LOW_SIDE_B_PIN PIN4
+
 #endif /* PCBAL_H_ */
