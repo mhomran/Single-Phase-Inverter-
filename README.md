@@ -11,6 +11,20 @@ Single Phase Inverter (H-bridge) algorithm with Atmega328p microcontroller targe
 # Timing Diagram:
 ![TimingDiagram](Gallery/TimingDiagram.png)
 
+# Tasks:
+| Task          | Type     | Execution time (us) | Period = deadtime (ms) | Realease Time (ms) |
+| ------------- | -------- | ------------------- | ---------------------- | ------------------ |
+| ADC ch0 read  | hardware | 1                   | 1                      | 0                  |
+| PWM ch A & B  | hardware | ~0                  | 1                      | 0                  |
+| PWM deinit    | software | ~0                  | 10                     | 8                  |
+| IO deinit     | software | ~0                  | 10                     | 8                  |
+| PWM Update    | software | ~0                  | 10                     | 0                  |
+| IO Update     | software | ~0                  | 10                     | 0                  |
+
+### Tick = 1 ms
+### major cycle = 10 ms
+### CPU utilization ~= 1 %
+
 # Installation:
 ## Connect your hardware
 - HS_A = 9
