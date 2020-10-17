@@ -27,7 +27,8 @@ Single Phase Inverter (H-bridge) algorithm with Atmega328p microcontroller targe
 
 # Installation:
 ## Connect your hardware
-- HS_A = 9
+(the naming is according to Arduino pins naming)
+- HS_A = 9 
 - HS_B = 10
 - LS_A = 11
 - LS_B = 12
@@ -38,7 +39,7 @@ Single Phase Inverter (H-bridge) algorithm with Atmega328p microcontroller targe
             |               |
     HS_A  |         HS_B  |
             |               |						
-            |------LOAD-----|
+            |------LOAD-----|     A0---Potentiometer
             |               |						
     LS_A  |         LS_B  |
             |               |						
